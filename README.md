@@ -1,4 +1,4 @@
 # Football Highlights App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Created this project to display football highlights using API. Used Bootstrap for styling.
 
