@@ -1,15 +1,15 @@
-import { Container, Row, Col } from 'react-bootstrap';
 import './App.css';
+import Navbar from './components/Navbar'
+import Content from './components/Content';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <Container fluid>
-      <Row>
-        <Col>
-          <h1 style={{textAlign: 'center', fontSize: '60px'}}>Football Highlights</h1>
-        </Col>
-      </Row>
-    </Container>
+    <div>
+      <Navbar />
+      <Content />
+      <Footer />
+    </div>
   );  
 }
 
