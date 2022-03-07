@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react'
 import '../App.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
-import { isCompositeComponentWithType } from 'react-dom/test-utils';
 
 const Content = () => {
   const[data, setData] = useState([]);
@@ -21,21 +20,24 @@ const Content = () => {
   }, [])
 
   return (
-  <div style={{ height: '88vh'}}>
     <Container fluid>
       <Row>
         <Col>
-          <h1 style={{textAlign: 'center', fontSize: '60px'}}>Football Highlights</h1>
-            {data.map((item) => {
-              <div className='item-div'>
-                <div className='name-div'></div>
-                <div className='image-div'></div>
+          <div className='content'>
+            {data.map((item) => (
+              <div className='item-div' key={item.title} onClick= {()=> window.open(item.matchviewUrl)}>
+                <div>
+                  <h4 style={{fontSize: '12px'}}>{item.title}</h4>
+                </div>
+                <div>
+                  <img src={item.thumbnail} alt="#" />  
+                </div>
               </div>
-            })}
+            ))}
+          </div>
         </Col>
       </Row>
     </Container>
-  </div>
   )
 }
 
