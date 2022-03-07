@@ -1,16 +1,18 @@
 import React from 'react'
 import { Navbar, Container, Nav } from 'react-bootstrap'
 
-function NavigationBar() {
+const NavigationBar = () => {
   return (
-  <Navbar bg='dark' variant='dark'>
-    <Container>
-      <Navbar.Brand href="#home">Football Highlights</Navbar.Brand>
-        <Nav className="me-auto">
-          {/* <Nav.Link href="#home">Home</Nav.Link> */}
-        </Nav>
-    </Container>
-  </Navbar>
+    <div style={{ height: '8vh'}}>
+      <Navbar bg='dark' variant='dark'>
+        <Container>
+          <Navbar.Brand style={{cursor: 'pointer'}}>Football Highlights</Navbar.Brand>
+            <Nav className="me-auto">
+              <Nav.Link href="#about">About</Nav.Link>
+            </Nav>
+        </Container>
+      </Navbar>
+    </div>
   )
 }
 
